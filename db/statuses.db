@@ -1,0 +1,203 @@
+<statuses>
+
+    <status id="1">
+        <hu>Jóváhagyásra vár</hu>
+        <gb>Pending</gb>
+        <color>text-danger</color>
+        <icon>fas fa-check-double</icon>
+        <nextsids>
+            <sid>2</sid>
+        </nextsids>
+    </status>
+    <status id="2">
+        <hu>Ügy létrehozva</hu>
+        <gb>Case created</gb>
+        <color>text-warning</color>
+        <icon>fas fa-plus</icon>
+        <nextsids>
+            <sid>3</sid>
+            <sid>18</sid>
+        </nextsids>
+    </status>
+    <status id="3">
+        <hu>Eszköz beérkezett a MDS szervizközpontba</hu>
+        <gb>Item arrived to MyDroneService Service Center</gb>
+        <color>text-warning</color>
+        <icon>fas fa-warehouse</icon>
+        <nextsids>
+            <sid>4</sid>
+        </nextsids>
+    </status>
+    <status id="4">
+        <hu>Bevizsgálás megtörtént</hu>
+        <gb>Item inspected</gb>
+        <color>text-warning</color>
+        <icon>fas fa-eye</icon>
+        <nextsids>
+            <sid>5</sid>
+            <sid>7</sid>
+            <sid>13</sid>
+            <sid>14</sid>
+            <sid>19</sid>
+        </nextsids>
+    </status>
+
+    <status id="5">
+        <hu>Továbbítva a központi DJI szervizbe</hu>
+        <gb>Item forwarded to DJI</gb>
+        <color>text-warning</color>
+        <icon>fas fa-angle-double-right</icon>
+        <nextsids>
+            <sid>6</sid>
+        </nextsids>
+    </status>
+    <status id="6">
+        <hu>Visszaérkezett a központi DJI szervizből</hu>
+        <gb>Item returned from DJI</gb>
+        <color>text-warning</color>
+        <icon>fas fa-angle-double-left</icon>
+        <nextsids>
+            <sid>11</sid>
+            <sid>13</sid>
+            <sid>14</sid>
+            <sid>19</sid>
+        </nextsids>
+    </status>
+
+    <status id="7">
+        <hu>Árajánlat kiadva</hu>
+        <gb>Bill created</gb>
+        <color>text-warning</color>
+        <icon>fas fa-file-invoice</icon>
+        <nextsids>
+            <sid>8</sid>
+            <sid>16</sid>
+        </nextsids>
+    </status>
+    <status id="8">
+        <hu>Árajánlat elfogadva</hu>
+        <gb>Bill accepted</gb>
+        <color>text-warning</color>
+        <icon>fas fa-vote-yea</icon>
+        <nextsids>
+            <sid>20</sid>
+            <sid>9</sid>
+        </nextsids>
+    </status>
+    <status id="9">
+        <hu>Javítás alatt</hu>
+        <gb>Under repair</gb>
+        <color>text-warning</color>
+        <icon>fas fa-wrench</icon>
+        <nextsids>
+            <sid>10</sid>
+        </nextsids>
+    </status>
+    <status id="10">
+        <hu>Javítás befejezve</hu>
+        <gb>Repair finished</gb>
+        <color>text-warning</color>
+        <icon>fas fa-check</icon>
+        <nextsids>
+            <sid>11</sid>
+            <sid>13</sid>
+            <sid>14</sid>
+            <sid>19</sid>
+        </nextsids>
+    </status>
+
+    <status id="11">
+        <hu>Fizetésre vár</hu>
+        <gb>íwaiting for payment</gb>
+        <color>text-warning</color>
+        <icon>fas fa-money-check-alt</icon>
+        <nextsids>
+            <sid>12</sid>
+        </nextsids>
+    </status>
+    <status id="12">
+        <hu>Pénzügyileg rendezve</hu>
+        <gb>Payment completed</gb>
+        <color>text-warning</color>
+        <icon>fas fa-check</icon>
+        <nextsids>
+            <sid>13</sid>
+            <sid>14</sid>
+            <sid>19</sid>
+        </nextsids>
+    </status>
+    <status id="13">
+        <hu>Futárnak átadva</hu>
+        <gb>Handed over to a courier</gb>
+        <color>text-warning</color>
+        <icon>fas fa-dolly</icon>
+        <nextsids>
+            <sid>15</sid>
+        </nextsids>
+    </status>
+    <status id="14">
+        <hu>Személyes átvételre vár a MDS szervizközpontban</hu>
+        <gb>Waiting for pickup</gb>
+        <color>text-warning</color>
+        <icon>fas fa-people-carry</icon>
+        <nextsids>
+            <sid>15</sid>
+        </nextsids>
+    </status>
+    <status id="15">
+        <hu>Ügy lezárva</hu>
+        <gb>Case completed</gb>
+        <color>text-success</color>
+        <icon>fas fa-check</icon>
+        <nextsids>
+            <sid>100</sid>
+        </nextsids>
+    </status>
+
+    <status id="16">
+        <hu>Árajánlat elutasítva</hu>
+        <gb>Bill declined</gb>
+        <color>text-warning</color>
+        <icon>fas fa-times</icon>
+        <nextsids>
+            <sid>11</sid>
+        </nextsids>
+    </status>
+
+    <status id="17">
+        <hu>Ügy módosítva</hu>
+        <gb>Case modified</gb>
+        <color>text-warning</color>
+        <icon>fas fa-pen</icon>
+    </status>
+
+    <status id="18">
+        <hu>Beérkezett a DJI ARS üzletbe</hu>
+        <gb>Item arrived to DJI ARS store</gb>
+        <color>text-warning</color>
+        <icon>fas fa-store</icon>
+        <nextsids>
+            <sid>3</sid>
+        </nextsids>
+    </status>
+    <status id="19">
+        <hu>Személyes átvételre vár a DJI ARS üzletben</hu>
+        <gb>Waiting for pickup at DJI ARS store</gb>
+        <color>text-warning</color>
+        <icon>fas fa-store</icon>
+        <nextsids>
+            <sid>15</sid>
+        </nextsids>
+    </status>
+    <status id="20">
+        <hu>Alkatrészre vár</hu>
+        <gb>Waiting for parts</gb>
+        <color>text-warning</color>
+        <icon>fas fa-hourglass-half</icon>
+        <nextsids>
+            <sid>9</sid>
+        </nextsids>
+    </status>
+</statuses>
+
+

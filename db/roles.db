@@ -1,0 +1,99 @@
+<roles>
+    <role id="0">
+        <hu>Ügyfél</hu>
+        <gb>Client</gb>
+        <color>text-primary</color>
+        <icon>fas fa-user</icon>
+    </role>
+    <role id="1">
+        <hu>Szerviztechnikus</hu>
+        <gb>Repair technician</gb>
+        <color>text-danger</color>
+        <icon>fas fa-tools</icon>
+    </role>
+    <role id="2">
+        <hu>Adminisztrációs Munkatárs</hu>
+        <gb>Administrator</gb>
+        <color>text-danger</color>
+        <icon>fas fa-user</icon>
+    </role>
+    <role id="3">
+        <hu>Director of Business Development</hu>
+        <gb>Director of Business Development</gb>
+        <color>text-danger</color>
+        <icon>fas fa-user-tie</icon>
+    </role>
+    <role id="4">
+        <hu>Vezető szerviztechnikus</hu>
+        <gb>Senior repair technician</gb>
+        <color>text-danger</color>
+        <icon>fas fa-tools</icon>
+    </role>
+    <role id="5">
+        <hu>Fejlesztő</hu>
+        <gb>Developer</gb>
+        <color>text-black</color>
+        <icon>fas fa-user-astronaut</icon>
+    </role>
+    <role id="6">
+        <hu>DJI ARS Store</hu>
+        <gb>DJI ARS Store</gb>
+        <color>text-warning</color>
+        <icon>fas fa-store</icon>
+    </role>
+    <role id="7">
+        <hu>Commercial Director</hu>
+        <gb>Commercial Director</gb>
+        <color>text-danger</color>
+        <icon>fas fa-user-tie</icon>
+    </role>
+    <role id="8">
+        <hu>Szervizvezető</hu>
+        <gb>Szervizvezető</gb>
+        <color>text-danger</color>
+        <icon>fas fa-user-tie</icon>
+    </role>
+    <role id="9">
+        <hu>Marketing</hu>
+        <gb>Marketing</gb>
+        <color>text-danger</color>
+        <icon>fas fa-ad</icon>
+    </role>
+    <role id="10">
+        <hu>Partner</hu>
+        <gb>Partner</gb>
+        <color>text-info</color>
+        <icon>far fa-gem</icon>
+    </role>
+    <role id="11">
+        <hu>Kereskedelmi ügyintéző</hu>
+        <gb>Commercial Administrator</gb>
+        <color>text-danger</color>
+        <icon>fas fa-briefcase</icon>
+    </role>
+    <role id="12">
+        <hu>Kereskedelmi ügyintéző csoportvezető</hu>
+        <gb>Leding Commercial Administrator</gb>
+        <color>text-danger</color>
+        <icon>fas fa-briefcase</icon>
+    </role>
+    <role id="13">
+        <hu>Üzlettámogatási igazgató</hu>
+        <gb>business support director</gb>
+        <color>text-danger</color>
+        <icon>fas fa-briefcase</icon>
+    </role>
+    <role id="20">
+        <hu>End user</hu>
+        <gb>End user</gb>
+        <color>text-primary</color>
+        <icon>fas fa-user</icon>
+    </role>
+    <role id="21">
+        <hu>Reseller</hu>
+        <gb>Reseller</gb>
+        <color>text-primary</color>
+        <icon>fas fa-users</icon>
+    </role>
+</roles>
+

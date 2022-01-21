@@ -1,0 +1,116 @@
+<language name="English" short="gb">
+    <login>Sign in</login>
+    <register>Sign up</register>
+    <news>News</news>
+    <email>Email</email>
+    <password>Password</password>
+    <lostpasswd>Forgot your password?</lostpasswd>
+    <donthaveaccount>Don't have an account?</donthaveaccount>
+    <welcome>Welcome</welcome>
+    <settings>Settings</settings>
+    <logout>Log out</logout>
+    <overview>Overview</overview>
+    <home>Home</home>
+    <mycases>My cases</mycases>
+    <myaddresses>My addresses</myaddresses>
+    <myinvoices>My invoices</myinvoices>
+    <pagenotfound>That page could not be found.</pagenotfound>
+    <backtohome>Back to home</backtohome>
+    <createnew>New</createnew>
+    <id>ID</id>
+    <device>Device</device>
+    <serial>Serial number</serial>
+    <status>Status</status>
+    <show>Show</show>
+    <addnew>Add</addnew>
+    <deliveryaddresses>Delivery addresses</deliveryaddresses>
+    <name>Name</name>
+    <country>Country</country>
+    <state>State</state>
+    <postcode>Postcode</postcode>
+    <city>City</city>
+    <address>Address</address>
+    <delete>Delete</delete>
+    <billingaddresses>Billing addresses</billingaddresses>
+    <chooselang>Choose language</chooselang>
+    <bugreport>Report a bug</bugreport>
+    <error>Error</error>
+    <mydevices>My devices</mydevices>
+    <newdevice>Add device</newdevice>
+    <series>series</series>
+    <snhelp>Can be found on the device's box (S/N), or on the device, on the QR code sticker.</snhelp>
+    <newaccessory>Add accessory</newaccessory>
+    <accessory>Accessory</accessory>
+    <duplitrue>Device is from Duplitec</duplitrue>
+    <duplifalse>Device is not from Duplitec</duplifalse>
+    <backtodevice>Back to the device</backtodevice>
+    <nodevice>No device could be found</nodevice>
+    <nodevicelong>You haven't added any devices yet</nodevicelong>
+    <faq>Faq</faq>
+    <devicedata>Device info</devicedata>
+    <added>Registered to the system</added>
+    <distributor>Distributor</distributor>
+    <accessories>Accessories</accessories>
+    <devicecases>Device cases</devicecases>
+    <messages>Messages</messages>
+    <addinspection>Add inspection</addinspection>
+    <device2>Device</device2>
+    <case>Case</case>
+    <nodaddress>No delivery address could be found</nodaddress>
+    <nodaddresslong>You haven't added any delivery addresses yet</nodaddresslong>
+    <nobaddress>No billing address could be found</nobaddress>
+    <nobaddresslong>You haven't added any billing addresses yet</nobaddresslong>
+    <nocase>No case could be found</nocase>
+    <nocaselong>You haven't added any cases yet</nocaselong>
+    <settings>Settings</settings>
+    <pfp>Profile picture</pfp>
+    <setpfp>Set Gravatar</setpfp>
+    <setnewpasswd>Create new password</setnewpasswd>
+    <caseinfo>Case info</caseinfo>
+    <!-- Last version -->
+    <yes>Yes</yes>
+    <no>No</no>
+    <newmsg>New message</newmsg>
+    <writemsg>Send</writemsg>
+    <msg>Message</msg>
+    <nomsg>No message could be found</nomsg>
+    <nomsglong>You haven't sent any messages yet</nomsglong>
+    <team>Team</team>
+    <teammembers>Team members</teammembers>
+    <role>Role</role>
+    <lastname>Last name</lastname>
+    <firstname>First name</firstname>
+    <remove>Remove</remove>
+    <newmember>New member</newmember>
+    <user>User</user>
+    <published>Published</published>
+    <publisher>Publisher</publisher>
+    <title>Title</title>
+    <writenews>Write news</writenews>
+    <publish>Publish</publish>
+    <content>Content</content>
+    <problemdesc>Problem</problemdesc>
+    <type>Type</type>
+    <warranty>Warranty</warranty>
+    <paid>Paid</paid>
+    <refresh>Refresh</refresh>
+    <inspect>Inspect</inspect>
+    <note>Note</note>
+    <password2>Confirm password</password2>
+    <addressname>Address name</addressname>
+    <addresstype>Address type</addresstype>
+    <housenumber>House number</housenumber>
+    <floor>Floor</floor>
+    <door>Door</door>
+    <accept>Accept</accept>
+    <tof>Terms of conditions</tof>
+    <haveaccount>Do you have an account?</haveaccount>
+    <phone>Phone</phone>
+    <notifications>Notifications</notifications>
+    <markallasread>Mark all as read</markallasread>
+    <nonoti>You don't have any notifications</nonoti>
+    <showall>See all</showall>
+    <lostpass>Lost password</lostpass>
+    <sendreminder>Send reminder</sendreminder>
+    <backtologin>Back to login</backtologin>
+</language>

@@ -1,0 +1,17 @@
+<api>
+
+    <user>
+        <uid>1</uid>
+        <username>main</username>
+        <token>c9343a2998210b7950b711c9ad9e5879c20a0d5f9c0ec5c8d2f0375d358557c7</token>
+    </user>
+
+    <user>
+        <uid>1</uid>
+        <username>Telekom</username>
+        <token>c9343a2998210b7950b711c9ad9e5879c20a0d5f9c0ec5c8d2f0375d358557c7</token>
+    </user>
+
+</api>
+
+

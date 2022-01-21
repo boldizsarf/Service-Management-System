@@ -1,0 +1,187 @@
+<language name="Magyar" short="hu">
+    <login>Belépés</login>
+    <register>Regisztráció</register>
+    <news>Hírek</news>
+    <email>Email</email>
+    <password>Jelszó</password>
+    <lostpasswd>Elfelejtetted a jelszavad?</lostpasswd>
+    <donthaveaccount>Még nincs felhasználód?</donthaveaccount>
+    <welcome>Üdvözlünk</welcome>
+    <settings>Beállítások</settings>
+    <logout>Kilépés</logout>
+    <overview>Áttekintés</overview>
+    <home>Kezdőlap</home>
+    <mycases>Ügyeim</mycases>
+    <myaddresses>Címeim</myaddresses>
+    <myinvoices>Számláim</myinvoices>
+    <pagenotfound>Az oldal nem található.</pagenotfound>
+    <backtohome>Vissza a kezdőlapra</backtohome>
+    <createnew>Létrehozás</createnew>
+    <id>Azonosító</id>
+    <device>Készülék típusa</device>
+    <serial>Szériaszám</serial>
+    <status>Állapot</status>
+    <show>Megtekintés</show>
+    <addnew>Hozzáadás</addnew>
+    <deliveryaddresses>Szállítási címek</deliveryaddresses>
+    <name>Név</name>
+    <country>Ország</country>
+    <state>Megye</state>
+    <postcode>Irányítószám</postcode>
+    <city>Település</city>
+    <address>Cím</address>
+    <delete>Törlés</delete>
+    <billingaddresses>Számlázási címek</billingaddresses>
+    <chooselang>Nyelvválasztás</chooselang>
+    <bugreport>Hibabajelentés az oldal fejlesztőinek</bugreport>
+    <error>Hiba</error>
+    <mydevices>Eszközeim</mydevices>
+    <newdevice>Eszköz hozzáadása</newdevice>
+    <series>széria</series>
+    <snhelp>Az eszköz dobozán található (S/N), vagy magán az eszközön a QR kód matricán.</snhelp>
+    <newaccessory>Tartozékok hozzáadása</newaccessory>
+    <accessory>Tartozék típusa</accessory>
+    <duplitrue>Duplitec forgalmazói matricás termék</duplitrue>
+    <duplifalse>A terméket nem a Duplitec hozta forgalomba</duplifalse>
+    <backtodevice>Vissza az eszközhöz</backtodevice>
+    <nodevice>Nem található készülék</nodevice>
+    <nodevicelong>Még nem adtál hozzá egy készüléket sem</nodevicelong>
+    <faq>Tudnivalók</faq>
+    <devicedata>Eszköz adatai</devicedata>
+    <added>Rendszerbe felvéve</added>
+    <distributor>Forgalmazó</distributor>
+    <accessories>Tartozékok</accessories>
+    <devicecases>Eszköz ügyei</devicecases>
+    <messages>Üzenetek</messages>
+    <addinspection>Bevizsgálás hozzáadása</addinspection>
+    <device2>Készülék</device2>
+    <case>Ügy</case>
+    <nodaddress>Nem található szállítási cím</nodaddress>
+    <nodaddresslong>Még nem adtál hozzá egy szállítási címet sem</nodaddresslong>
+    <nobaddress>Nem található számlázási cím</nobaddress>
+    <nobaddresslong>Még nem adtál hozzá egy számlázási címet sem</nobaddresslong>
+    <nocase>Nem található ügy</nocase>
+    <nocaselong>Még nem hoztál létre egy ügyet sem</nocaselong>
+    <settings>Beállítások</settings>
+    <pfp>Profilkép</pfp>
+    <setpfp>Gravatar beállítása</setpfp>
+    <setnewpasswd>Új jelszó beállítása</setnewpasswd>
+    <caseinfo>Ügy részletei</caseinfo>
+    <yes>Igen</yes>
+    <no>Nem</no>
+    <newmsg>Új üzenet</newmsg>
+    <writemsg>Elküld</writemsg>
+    <msg>Üzenet</msg>
+    <nomsg>Nem található üzenet</nomsg>
+    <nomsglong>Még nem írtál egy üzenetet sem</nomsglong>
+    <team>Csapat</team>
+    <teammembers>Csapattagok</teammembers>
+    <role>Beosztás</role>
+    <lastname>Vezetéknév</lastname>
+    <firstname>Keresztnév</firstname>
+    <remove>Eltávolítás</remove>
+    <newmember>Csapattag hozzáadása</newmember>
+    <user>Felhasználó</user>
+    <published>Közzétéve</published>
+    <publisher>Író</publisher>
+    <title>Cím</title>
+    <writenews>Hír létrehozása</writenews>
+    <publish>Közzététel</publish>
+    <content>Tartalom</content>
+    <problemdesc>Probléma leírása</problemdesc>
+    <type>Típus</type>
+    <warranty>Garanciális</warranty>
+    <paid>Fizetős</paid>
+    <refresh>Frissítés</refresh>
+    <inspect>Bevizsgálás</inspect>
+    <note>Megjegyzés</note>
+    <password2>Jelszó megerősítése</password2>
+    <addressname>Közterület neve</addressname>
+    <addresstype>Közterület típusa</addresstype>
+    <housenumber>Házszám</housenumber>
+    <floor>Emelet</floor>
+    <door>Ajtó</door>
+    <accept>Elfogadom az</accept>
+    <tof>Felhasználási Feltételeket</tof>
+    <haveaccount>Már van felhasználód?</haveaccount>
+    <!-- Last version -->
+    <phone>Telefonszám</phone>
+    <lostpass>Elfelejtett jelszó</lostpass>
+    <sendreminder>Jelszó helyreállítása</sendreminder>
+    <backtologin>Vissza a belépéshez</backtologin>
+    <newpasswd>Új jelszó</newpasswd>
+    <newpasswd2>Új jelszó megerősítése</newpasswd2>
+    <todo>Feladatok</todo>
+    <approvecases>Jóváhagyásra váró ügyek</approvecases>
+    <todo2>Feladat</todo2>
+    <expire>Lejárat</expire>
+    <inspectcases>Bevizsgálásra váró ügyek</inspectcases>
+    <newtodo>Feladat létrehozása</newtodo>
+    <notodo>Nem található feladat</notodo>
+    <notodolong>Még nem adtál hozzá egy feladatot sem</notodolong>
+    <parts>Alkatrészek</parts>
+    <addpart>Alkatrész hozzáadása</addpart>
+    <userdata>Felhasználó adatai</userdata>
+    <devices>Készülékek</devices>
+    <search>Keresés</search>
+    <toexpire>Hátralévő idő</toexpire>
+    <stat>Statisztika</stat>
+    <casecount>Ügyek</casecount>
+    <template>Sablon</template>
+    <inspection>Bevizsgálás eredménye</inspection>
+    <taxnumber>Adószám</taxnumber>
+    <contactemail>Kapcsolattartási email</contactemail>
+    <issuereportfordevs>Hiba jelentése a fejlesztők számára</issuereportfordevs>
+    <issueplace>Hiba helye</issueplace>
+    <issuedesc>Hiba pontos leírása</issuedesc>
+    <addissue>Hiba jelentése</addissue>
+    <iswarranty>Az ügy megállapított típusa</iswarranty>
+    <inspectnote>Jegyzőkönyv</inspectnote>
+    <imu>IMU</imu>
+    <compass>Iránytű</compass>
+    <gps>GPS</gps>
+    <gimbal>Gimbal stabilizálás</gimbal>
+    <video>Képátviteli minőség</video>
+    <flying>Irányíthatóság</flying>
+    <position>Pozíció tartás</position>
+    <stable>Stabilitás</stable>
+    <collision>Akadály érzékelés</collision>
+    <testvideo>Tesztvideó</testvideo>
+    <good>Megfelelő</good>
+    <notgood>Nem megfelelő</notgood>
+    <did>Készült</did>
+    <notdid>Nem készült</notdid>
+    <ibill>Árajánlat</ibill>
+    <sku>Cikkszám</sku>
+    <pricent>Ár (Nettó)</pricent>
+    <pricebr>Ár (Bruttó)</pricebr>
+    <quantity>Darabszám</quantity>
+    <total>Összesen</total>
+    <ibillstatus>Árajánlat állapota</ibillstatus>
+    <acceptedwhen>Elfogadva</acceptedwhen>
+    <declinedwhen>Elutasítva</declinedwhen>
+    <acceptibill>Árajánlat elfogadása</acceptibill>
+    <send>Elküldés</send>
+    <acceptdeclinedcases>Elfogadott, vagy elutasított árajánlatok</acceptdeclinedcases>
+    <and>és az</and>
+    <privacy>Adatkezelési feltételeket</privacy>
+    <printi>Bevizsgálás kinyomtatása</printi>
+    <images>Képek</images>
+    <aszf2>Felhasználási feltételek</aszf2>
+    <any2>Adatkezelési feltételek</any2>
+    <contrdown>Letölthető szerződések</contrdown>
+    <loginattempts>Belépési napló</loginattempts>
+    <ip>IP cím</ip>
+    <useragent>Eszközinformáció</useragent>
+    <date>Dátum</date>
+    <files>Fájlok</files>
+    <nofile>Nem található fájl</nofile>
+    <nofilelong>Még nem lett feltöltve egy fájl se ehhez az ügyhöz</nofilelong>
+    <uploadfile>Fájl feltöltése</uploadfile>
+    <filehelp>Csak az alábbi fájltípusok tölthetőek fel: .jpg, .png, .pdf, .hevc, .heif. A fájlok mérete nem haladhatja meg a 5MB -ot.</filehelp>
+    <notifications>Értesítések</notifications>
+    <markallasread>Összes megjelölése olvasottként</markallasread>
+    <nonoti>Még nincsenek értesítéseid</nonoti>
+    <showall>Összes megtekintése</showall>
+    <staylogin>Belépve maradok</staylogin>
+</language>

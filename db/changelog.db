@@ -1,0 +1,170 @@
+<changelog>
+
+    <version current="true">
+        <number>1.2.1</number>
+        <type>Public Release</type>
+        <date>2021.01.03.</date>
+        <creator>Fodor Boldizsár</creator>
+        <changes>
+            <feature>B2B támogatás</feature>
+            <feature>Új permission rendszer</feature>
+            <feature>Részletes naplózás</feature>
+        </changes>
+    </version>
+
+    <version>
+        <number>1.1.5</number>
+        <type>Public Release</type>
+        <date>2020.11.07.</date>
+        <creator>Fodor Boldizsár</creator>
+        <changes>
+            <feature>MyDroneSafety</feature>
+            <feature>Globális kedvezmény rendszer</feature>
+        </changes>
+    </version>
+
+    <version>
+        <number>1.1.0</number>
+        <type>Public Release</type>
+        <date>2020.11.01.</date>
+        <creator>Fodor Boldizsár</creator>
+        <changes>
+            <feature>Okos feladatok menü</feature>
+        </changes>
+    </version>
+
+    <version>
+        <number>1.0.18</number>
+        <type>Public Release</type>
+        <date>2020.10.15.</date>
+        <creator>Fodor Boldizsár</creator>
+        <changes>
+            <feature>Bannerek funkció</feature>
+            <feature>Hírek funkció</feature>
+        </changes>
+    </version>
+
+    <version>
+        <number>1.0.17</number>
+        <type>Public Release</type>
+        <date>2020.10.01.</date>
+        <creator>Fodor Boldizsár</creator>
+        <changes>
+            <feature>Feltölthető fájlméret növelése</feature>
+            <feature>iPhone fotó kompatibilitás feltöltésnél</feature>
+            <feature>Új kezdőképernyő</feature>
+            <feature>Statisztika</feature>
+            <feature>Bugok javítása</feature>
+        </changes>
+    </version>
+
+    <version>
+        <number>1.0.16</number>
+        <type>Public Release</type>
+        <date>2020.09.20.</date>
+        <creator>Fodor Boldizsár</creator>
+        <changes>
+            <feature>Újraírt értesítési rendszer</feature>
+            <feature>Feladatok menü</feature>
+            <feature>Megújult kezdőlap</feature>
+        </changes>
+    </version>
+
+    <version>
+        <number>1.0.15</number>
+        <type>Public Release</type>
+        <date>2020.09.17.</date>
+        <creator>Fodor Boldizsár</creator>
+        <changes>
+            <feature>Rebranding</feature>
+            <feature>DataTable funkciók bővítése</feature>
+        </changes>
+    </version>
+
+    <version>
+        <number>1.0.14</number>
+        <type>Public Release</type>
+        <date>2020.09.14.</date>
+        <creator>Fodor Boldizsár</creator>
+        <changes>
+            <feature>Ügyeknél fájlok feltöltése funkció</feature>
+            <feature>Átvételi lapra számlázási cím kerül</feature>
+            <feature>Bugok javítása</feature>
+            <feature>Funkciók javítása</feature>
+        </changes>
+    </version>
+
+    <version>
+        <number>1.0.13</number>
+        <type>Public Release</type>
+        <date>2020.09.13.</date>
+        <creator>Fodor Boldizsár</creator>
+        <changes>
+            <feature>Ügyek színnel való megkülönböztetése</feature>
+            <feature>Sürgősségi óradíjas esetek jobb kijelzése</feature>
+            <feature>Készülékek menü</feature>
+            <feature>Login napló</feature>
+            <feature>Email cím manuálisan megerősíthető</feature>
+            <feature>Bugok javítása</feature>
+            <feature>Funkciók javítása</feature>
+        </changes>
+    </version>
+
+    <version>
+        <number>1.0.12</number>
+        <type>Public Release</type>
+        <date>2020.09.07.</date>
+        <creator>Fodor Boldizsár</creator>
+        <changes>
+            <feature>Árak nettóban való kezelése</feature>
+            <feature>Kedvezmény hozzáadható az árajánlat hozzáadásakor</feature>
+            <feature>DHL és GLS csomagszám támogatás</feature>
+            <feature>Eszközök bővítése</feature>
+            <feature>DataTable implementálása</feature>
+            <feature>Ügyfél nézet</feature>
+        </changes>
+    </version>
+
+    <version>
+        <number>1.0.11</number>
+        <type>Public Release</type>
+        <date>2020.09.03.</date>
+        <creator>Fodor Boldizsár</creator>
+        <changes>
+            <feature>CAS szám kezelés</feature>
+            <feature>Bevizsgáláshoz csatolható kép</feature>
+            <feature>Nem léptet ki a rendszer x idő leteltével</feature>
+        </changes>
+    </version>
+
+    <version>
+        <number>1.0.10</number>
+        <type>Public Release</type>
+        <date>2020.09.01.</date>
+        <creator>Fodor Boldizsár</creator>
+        <changes>
+            <feature>Design változás</feature>
+            <feature>Alap profilkép változás</feature>
+            <feature>Favicon változás</feature>
+            <feature>Átvételi lapnál kiválaszthatóak a leadott elemek</feature>
+            <feature>Az átvételi lap összes mezőjét kitölti a rendszer, amit tud</feature>
+            <feature>Módosíthatóak és törölhetőek az ügyek</feature>
+            <feature>Megerősítő popup ablakok</feature>
+            <feature>Bugok javítása</feature>
+        </changes>
+    </version>
+
+    <version>
+        <number>1.0.0</number>
+        <type>Initial Release</type>
+        <date>2020.08.30.</date>
+        <creator>Fodor Boldizsár</creator>
+        <changes>
+            <feature>Customer management</feature>
+            <feature>Device management</feature>
+            <feature>Case management</feature>
+        </changes>
+    </version>
+
+</changelog>
+

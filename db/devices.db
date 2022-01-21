@@ -1,0 +1,124 @@
+<devices>
+
+    <devicegroup name="DJI Mavic">
+        <device name="Mavic Pro" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Mavic Pro Platinum" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Mavic Air" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Mavic 2 Zoom" nworkhnt="11732" fworkhnt="17598" />
+        <device name="Mavic 2 Pro" nworkhnt="11732" fworkhnt="17598" />
+        <device name="Mavic 2 Enterprise" nworkhnt="15669" fworkhnt="23503" />
+        <device name="Mavic Mini" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Mavic Air 2" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Mavic Air 2S" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Mini 2" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Mavic 3" nworkhnt="11732" fworkhnt="17598" />
+    </devicegroup>
+
+    <devicegroup name="DJI Phantom 3">
+        <device name="Phantom 3 Standard" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Phantom 3 Advanced" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Phantom 3 Professional" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Phantom 3 4K" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Phantom 3 SE" nworkhnt="7795" fworkhnt="11692" />
+    </devicegroup>
+
+    <devicegroup name="DJI Phantom 4">
+        <device name="Phantom 4" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Phantom 4 Advanced" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Phantom 4 Pro" nworkhnt="11732" fworkhnt="17598" />
+        <device name="Phantom 4 Pro V2.0" nworkhnt="11732" fworkhnt="17598" />
+        <device name="Phantom 4 RTK" nworkhnt="15669" fworkhnt="23503" />
+        <device name="Phantom 4 Multispectral" nworkhnt="15669" fworkhnt="23503" />
+    </devicegroup>
+
+    <devicegroup name="DJI Osmo">
+        <device name="Osmo X3" nworkhnt="11732" fworkhnt="17598" />
+        <device name="Osmo X5" nworkhnt="11732" fworkhnt="17598" />
+        <device name="Osmo Pocket" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Osmo Action" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Osmo Mobile 1" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Osmo Mobile 2" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Osmo Mobile 3" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Osmo Mobile 4" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Pocket 2" nworkhnt="7795" fworkhnt="11692" />
+    </devicegroup>
+
+    <devicegroup name="DJI Ronin">
+        <device name="Ronin-MX" nworkhnt="11732" fworkhnt="17598" />
+        <device name="Ronin-S" nworkhnt="11732" fworkhnt="17598" />
+        <device name="Ronin-2" nworkhnt="11732" fworkhnt="17598" />
+        <device name="Ronin-SC" nworkhnt="11732" fworkhnt="17598" />
+        <device name="RS 2" nworkhnt="11732" fworkhnt="17598" />
+        <device name="RSC 2" nworkhnt="11732" fworkhnt="17598" />
+    </devicegroup>
+
+    <devicegroup name="DJI Zenmuse">
+        <device name="X3" nworkhnt="11732" fworkhnt="17598" />
+        <device name="X5" nworkhnt="11732" fworkhnt="17598" />
+        <device name="X5S" nworkhnt="11732" fworkhnt="17598" />
+        <device name="X7" nworkhnt="11732" fworkhnt="17598" />
+        <device name="Z30" nworkhnt="11732" fworkhnt="17598" />
+        <device name="XT" nworkhnt="11732" fworkhnt="17598" />
+        <device name="XT2" nworkhnt="11732" fworkhnt="17598" />
+    </devicegroup>
+
+    <devicegroup name="DJI Spark">
+        <device name="Spark" nworkhnt="7795" fworkhnt="11692" />
+    </devicegroup>
+
+    <devicegroup name="DJI FPV">
+        <device name="DJI FPV" nworkhnt="11732" fworkhnt="17598" />
+        <device name="FPV System" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Goggles" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Goggles Racing Edition" nworkhnt="7795" fworkhnt="11692" />
+    </devicegroup>
+
+    <devicegroup name="DJI Inspire">
+        <device name="Inspire 1" nworkhnt="11732" fworkhnt="17598" />
+        <device name="Inspire 1 Pro/Raw" nworkhnt="11732" fworkhnt="17598" />
+        <device name="Inspire 2" nworkhnt="11732" fworkhnt="17598" />
+        <device name="CineSSD" nworkhnt="11732" fworkhnt="17598" />
+    </devicegroup>
+
+    <devicegroup name="DJI Enterprise">
+        <device name="Matrice 200 Series V2" nworkhnt="15669" fworkhnt="23503" />
+        <device name="MG-1P" nworkhnt="15669" fworkhnt="23503" />
+        <device name="T16" nworkhnt="15669" fworkhnt="23503" />
+        <device name="T20" nworkhnt="15669" fworkhnt="23503" />
+        <device name="T30" nworkhnt="15669" fworkhnt="23503" />
+        <device name="T10" nworkhnt="15669" fworkhnt="23503" />
+        <device name="Matrice 200 Series" nworkhnt="15669" fworkhnt="23503" />
+        <device name="Matrice 600 Pro" nworkhnt="15669" fworkhnt="23503" />
+        <device name="AGRAS MG-1S Series" nworkhnt="15669" fworkhnt="23503" />
+        <device name="Matrice 600" nworkhnt="15669" fworkhnt="23503" />
+        <device name="Matrice 300" nworkhnt="15669" fworkhnt="23503" />
+        <device name="D-RTK 2" nworkhnt="15669" fworkhnt="23503" />
+    </devicegroup>
+
+    <devicegroup name="Elistair">
+        <device name="Safe T" nworkhnt="15669" fworkhnt="23503" />
+    </devicegroup>
+
+    <devicegroup name="DJI Robomaster">
+        <device name="Robomaster S1" nworkhnt="7795" fworkhnt="11692" />
+    </devicegroup>
+
+    <devicegroup name="DJI Tello">
+        <device name="Tello" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Tello Iron Man" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Tello EDU" nworkhnt="7795" fworkhnt="11692" />
+    </devicegroup>
+
+    <devicegroup name="Autel Evo">
+        <device name="Evo 2" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Evo 2 Pro" nworkhnt="7795" fworkhnt="11692" />
+        <device name="Evo 2 Dual" nworkhnt="7795" fworkhnt="11692" />
+    </devicegroup>
+
+    <devicegroup name="Legacy">
+        <device name="Phantom 2" nworkhnt="7795" fworkhnt="11692" />
+    </devicegroup>
+
+</devices>
+
+

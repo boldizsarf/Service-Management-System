@@ -1,0 +1,25 @@
+<partners>
+
+    <partner>
+        <Name>Flymore</Name>
+        <Store>MyDroneService</Store>
+        <StoreEmail>szerviz@mydroneservice.hu</StoreEmail>
+        <ContactName>Zsákovics János</ContactName>
+        <ContactEmail>szerviz@mydroneservice.hu</ContactEmail>
+        <ContactPhone>+3614450109</ContactPhone>
+        <ContactAddress>1141 Budapest, Öv utca 35.</ContactAddress>
+    </partner>
+
+    <partner>
+        <Name>StarSystem</Name>
+        <Store>StarSystem</Store>
+        <StoreEmail>boldizsar.fodor@starsystem.hu</StoreEmail>
+        <ContactName>Fodor Boldizsár</ContactName>
+        <ContactEmail>fodorboldi7@gmail.com</ContactEmail>
+        <ContactPhone>+36309024964</ContactPhone>
+        <ContactAddress>1205 Budapest, Mártonffy utca 31.</ContactAddress>
+    </partner>
+
+</partners>
+
+

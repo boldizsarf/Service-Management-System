@@ -1,0 +1,269 @@
+<statuses>
+
+    <status id="0">
+        <hu>Nincs esemény</hu>
+        <gb>No action</gb>
+        <color>text-dark</color>
+        <icon>fas fa-check-double</icon>
+        <responsible>
+            <id></id>
+            <name></name>
+            <email></email>
+        </responsible>
+    </status>
+
+    <!-- Submitted -->
+    <status id="1">
+        <hu>Jóváhagyásra vár</hu>
+        <gb>Case submitted</gb>
+        <color>text-danger</color>
+        <icon>fas fa-check-double</icon>
+        <responsible>
+            <id>mds-1</id>
+            <name>MyDroneService</name>
+            <email>iroda@duplitec.hu</email>
+            <text>Jóváhagyni az ügyet</text>
+            <maxdays>1</maxdays>
+            <nextsid>2</nextsid>
+            <lang>hu</lang>
+        </responsible>
+    </status>
+    <status id="2">
+        <hu>Ügy létrehozva</hu>
+        <gb>Case accepted</gb>
+        <color>text-warning</color>
+        <icon>fas fa-plus</icon>
+        <responsible>
+            <id>mds-1</id>
+            <name>MyDroneService</name>
+            <email>iroda@duplitec.hu</email>
+            <text>Futárt rendelni</text>
+            <maxdays>1</maxdays>
+            <nextsid>3</nextsid>
+            <lang>hu</lang>
+        </responsible>
+    </status>
+    <status id="3">
+        <hu>Úton a boltból az MDS szervizközpontba</hu>
+        <gb>On its way from store to MDS repair center</gb>
+        <color>text-warning</color>
+        <icon>fas fa-plus</icon>
+        <responsible>
+            <id>mds-1</id>
+            <name>MyDroneService</name>
+            <email>iroda@duplitec.hu</email>
+            <text>Beérkeztetni a csomagot</text>
+            <maxdays>1</maxdays>
+            <nextsid>4</nextsid>
+            <lang>hu</lang>
+        </responsible>
+    </status>
+    <status id="4">
+        <hu>Feldolgozás alatt az MDS szervizközpontban</hu>
+        <gb>Processing at MDS repair center</gb>
+        <color>text-warning</color>
+        <icon>fas fa-warehouse</icon>
+        <responsible>
+            <id>mds-1</id>
+            <name>MyDroneService</name>
+            <email>iroda@duplitec.hu</email>
+            <text>Bevizsgálni a csomagot</text>
+            <maxdays>1</maxdays>
+            <nextsid>4</nextsid>
+            <lang>hu</lang>
+        </responsible>
+    </status>
+
+    <!-- Warranty -->
+    <status id="5">
+        <hu>Előkészülés a szállításhoz</hu>
+        <gb>Preparing for shipping</gb>
+        <color>text-warning</color>
+        <icon>fas fa-warehouse</icon>
+        <responsible>
+            <id>mds-1</id>
+            <name>MyDroneService</name>
+            <email>iroda@duplitec.hu</email>
+            <text>Feladni a csomagot a DJI -nak</text>
+            <maxdays>1</maxdays>
+            <nextsid>6</nextsid>
+            <lang>hu</lang>
+        </responsible>
+    </status>
+    <status id="6">
+        <hu>Úton a forgalmazótól a gyártóhoz</hu>
+        <gb>On its way from MDS repair center to DJI</gb>
+        <color>text-warning</color>
+        <icon>fas fa-warehouse</icon>
+        <responsible>
+            <id>dji</id>
+            <name>DJI</name>
+            <email>iroda@duplitec.hu</email>
+            <text>Accept the case</text>
+            <maxdays>3</maxdays>
+            <nextsid>7</nextsid>
+            <lang>gb</lang>
+        </responsible>
+    </status>
+    <status id="7">
+        <hu>Feldolgozás a gyártónál</hu>
+        <gb>Processing at DJI</gb>
+        <color>text-warning</color>
+        <icon>fas fa-warehouse</icon>
+        <responsible>
+            <id>dji</id>
+            <name>DJI</name>
+            <email>iroda@duplitec.hu</email>
+            <text>Inspect the case</text>
+            <maxdays>2</maxdays>
+            <nextsid>8</nextsid>
+            <lang>gb</lang>
+        </responsible>
+    </status>
+    <status id="8">
+        <hu>Bevizsgálás a gyártónál</hu>
+        <gb>Inspecting at DJI</gb>
+        <color>text-warning</color>
+        <icon>fas fa-warehouse</icon>
+        <responsible>
+            <id>dji</id>
+            <name>DJI</name>
+            <email>iroda@duplitec.hu</email>
+            <text>Repair the case</text>
+            <maxdays>3</maxdays>
+            <nextsid>9</nextsid>
+            <lang>gb</lang>
+        </responsible>
+    </status>
+    <status id="9">
+        <hu>Javítás a gyártónál</hu>
+        <gb>Repairing at DJI</gb>
+        <color>text-warning</color>
+        <icon>fas fa-warehouse</icon>
+        <responsible>
+            <id>dji</id>
+            <name>DJI</name>
+            <email>iroda@duplitec.hu</email>
+            <text>Send back the case</text>
+            <maxdays>1</maxdays>
+            <nextsid>10</nextsid>
+            <lang>gb</lang>
+        </responsible>
+    </status>
+    <status id="10">
+        <hu>Úton a gyártótól a forgalmazóhoz</hu>
+        <gb>On its way from DJI to MDS repair center</gb>
+        <color>text-warning</color>
+        <icon>fas fa-warehouse</icon>
+        <responsible>
+            <id>mds-1</id>
+            <name>MyDroneService</name>
+            <email>iroda@duplitec.hu</email>
+            <text>Veérkeztetni a csomagot</text>
+            <maxdays>3</maxdays>
+            <nextsid>11</nextsid>
+            <lang>hu</lang>
+        </responsible>
+    </status>
+    <status id="11">
+        <hu>Feldolgozás alatt az MDS szervizközpontban</hu>
+        <gb>Processing at MDS repair center</gb>
+        <color>text-warning</color>
+        <icon>fas fa-warehouse</icon>
+        <responsible>
+            <id>mds-1</id>
+            <name>MyDroneService</name>
+            <email>iroda@duplitec.hu</email>
+            <text>Visszaküldeni az üzletnek</text>
+            <maxdays>2</maxdays>
+            <nextsid>12</nextsid>
+            <lang>hu</lang>
+        </responsible>
+    </status>
+    <status id="12">
+        <hu>Úton az MDS szervizközpontból a boltba</hu>
+        <gb>On its way from MDS repair center to store</gb>
+        <color>text-warning</color>
+        <icon>fas fa-plus</icon>
+        <responsible>
+            <id>store</id>
+            <name>store</name>
+            <email>store</email>
+            <text>Beérkeztetni a csomagot</text>
+            <maxdays>2</maxdays>
+            <nextsid>0</nextsid>
+            <lang>hu</lang>
+        </responsible>
+    </status>
+
+    <!-- NFF -->
+    <status id="13">
+        <hu>Úton az MDS szervizközpontból a boltba</hu>
+        <gb>On its way from MDS repair center to store</gb>
+        <color>text-warning</color>
+        <icon>fas fa-plus</icon>
+        <responsible>
+            <id>store</id>
+            <name>store</name>
+            <email>store</email>
+            <text>Beérkeztetni a csomagot</text>
+            <maxdays>2</maxdays>
+            <nextsid>0</nextsid>
+            <lang>hu</lang>
+        </responsible>
+    </status>
+
+    <!-- No warranty -->
+    <status id="14">
+        <hu>Úton az MDS szervizközpontból a boltba</hu>
+        <gb>On its way from MDS repair center to store</gb>
+        <color>text-warning</color>
+        <icon>fas fa-plus</icon>
+        <responsible>
+            <id>store</id>
+            <name>store</name>
+            <email>store</email>
+            <text>Beérkeztetni a csomagot</text>
+            <maxdays>2</maxdays>
+            <nextsid>0</nextsid>
+            <lang>hu</lang>
+        </responsible>
+    </status>
+
+    <!-- DOA -->
+    <status id="15">
+        <hu>Jóváírásra vár</hu>
+        <gb>Waiting for administration</gb>
+        <color>text-warning</color>
+        <icon>fas fa-check-circle</icon>
+        <responsible>
+            <id>mds-2</id>
+            <name>A lányok</name>
+            <email>iroda@duplitec.hu</email>
+            <text>Jóváírni az eszközt</text>
+            <maxdays>2</maxdays>
+            <nextsid>0</nextsid>
+            <lang>hu</lang>
+        </responsible>
+    </status>
+
+    <!-- Lezárva -->
+    <status id="16">
+        <hu>Ügy lezárva</hu>
+        <gb>Case closed</gb>
+        <color>text-success</color>
+        <icon>fas fa-check</icon>
+        <responsible>
+            <id></id>
+            <name></name>
+            <email></email>
+            <text></text>
+            <maxdays></maxdays>
+            <nextsid></nextsid>
+            <lang></lang>
+        </responsible>
+    </status>
+
+</statuses>
+
+

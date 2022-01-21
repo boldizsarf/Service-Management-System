@@ -1,0 +1,24 @@
+<templates>
+    <template id="1" name="Ez egy teszt bevizsgálási sablon">
+        <warranty>false</warranty>
+        <imu>true</imu>
+        <compass>true</compass>
+        <gps>true</gps>
+        <gimbal>true</gimbal>
+        <video>true</video>
+        <flying>true</flying>
+        <position>true</position>
+        <stable>true</stable>
+        <collision>true</collision>
+        <testvideo>true</testvideo>
+        <report>Ez egy teszt jegyzőkönyv</report>
+        <workhours>1</workhours>
+        <parts>
+            <part SKU="123456" name="Eladó izé" longname="Amit az ügyfél lát" price="1000" quantity="1" />
+            <part SKU="123457" name="Eladó izé 2" longname="Amit az ügyfél lát" price="2000" quantity="2" />
+        </parts>
+    </template>
+</templates>
+
+
+

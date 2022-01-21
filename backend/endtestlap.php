@@ -1,0 +1,720 @@
+<?php
+if ($_SESSION["SYSTEM"] != "allowed") {
+    echo "Hiba! Nincs jogod ehhez a fájlhoz!";
+    return;
+}
+$dbsuser = $dbc->get("SELECT * FROM users WHERE email=?", [$_SESSION["email"]]);
+$suser = $dbsuser[0];
+
+$role = $dbsuser[0]["role"];
+
+if ($role == 0) {
+    echo "No permission";
+    return;
+}
+
+$dbendtest = $dbc->get("SELECT * FROM endtest WHERE cid=?", [$case["id"]]);
+$dbtestuser = $dbc->get("SELECT * FROM users WHERE id=?", [$dbendtest[0]["uid"]]);
+$dbtestuser2 = $dbc->get("SELECT * FROM users WHERE id=?", [$dbendtest[0]["confirmUser"]]);
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" style="width:100%;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="telephone=no" name="format-detection">
+    <title><?php echo "C" . $case["id"] . " átadási lap"; ?></title>
+    <!--[if (mso 16)]>
+    <style type="text/css">
+        a {text-decoration: none;}
+    </style>
+    <![endif]-->
+    <!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]-->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG></o:AllowPNG>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <!--[if !mso]><!-- -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+    <!--<![endif]-->
+    <style type="text/css">
+        #outlook a {
+            padding:0;
+        }
+        .ExternalClass {
+            width:100%;
+        }
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height:100%;
+        }
+        .es-button {
+            mso-style-priority:100!important;
+            text-decoration:none!important;
+        }
+        a[x-apple-data-detectors] {
+            color:inherit!important;
+            text-decoration:none!important;
+            font-size:inherit!important;
+            font-family:inherit!important;
+            font-weight:inherit!important;
+            line-height:inherit!important;
+        }
+        .es-desk-hidden {
+            display:none;
+            float:left;
+            overflow:hidden;
+            width:0;
+            max-height:0;
+            line-height:0;
+            mso-hide:all;
+        }
+        [data-ogsb] .es-button {
+            border-width:0!important;
+            padding:10px 20px 10px 20px!important;
+        }
+        @media only screen and (max-width:600px) {p, ul li, ol li, a { line-height:150%!important } h1 { font-size:30px!important; text-align:center; line-height:120% } h2 { font-size:26px!important; text-align:center; line-height:120% } h3 { font-size:20px!important; text-align:center; line-height:120% } .es-header-body h1 a, .es-content-body h1 a, .es-footer-body h1 a { font-size:30px!important } .es-header-body h2 a, .es-content-body h2 a, .es-footer-body h2 a { font-size:26px!important } .es-header-body h3 a, .es-content-body h3 a, .es-footer-body h3 a { font-size:20px!important } .es-menu td a { font-size:16px!important } .es-header-body p, .es-header-body ul li, .es-header-body ol li, .es-header-body a { font-size:16px!important } .es-content-body p, .es-content-body ul li, .es-content-body ol li, .es-content-body a { font-size:16px!important } .es-footer-body p, .es-footer-body ul li, .es-footer-body ol li, .es-footer-body a { font-size:16px!important } .es-infoblock p, .es-infoblock ul li, .es-infoblock ol li, .es-infoblock a { font-size:12px!important } *[class="gmail-fix"] { display:none!important } .es-m-txt-c, .es-m-txt-c h1, .es-m-txt-c h2, .es-m-txt-c h3 { text-align:center!important } .es-m-txt-r, .es-m-txt-r h1, .es-m-txt-r h2, .es-m-txt-r h3 { text-align:right!important } .es-m-txt-l, .es-m-txt-l h1, .es-m-txt-l h2, .es-m-txt-l h3 { text-align:left!important } .es-m-txt-r img, .es-m-txt-c img, .es-m-txt-l img { display:inline!important } .es-button-border { display:block!important } .es-btn-fw { border-width:10px 0px!important; text-align:center!important } .es-adaptive table, .es-btn-fw, .es-btn-fw-brdr, .es-left, .es-right { width:100%!important } .es-content table, .es-header table, .es-footer table, .es-content, .es-footer, .es-header { width:100%!important; max-width:600px!important } .es-adapt-td { display:block!important; width:100%!important } .adapt-img { width:100%!important; height:auto!important } .es-m-p0 { padding:0px!important } .es-m-p0r { padding-right:0px!important } .es-m-p0l { padding-left:0px!important } .es-m-p0t { padding-top:0px!important } .es-m-p0b { padding-bottom:0!important } .es-m-p20b { padding-bottom:20px!important } .es-mobile-hidden, .es-hidden { display:none!important } tr.es-desk-hidden, td.es-desk-hidden, table.es-desk-hidden { width:auto!important; overflow:visible!important; float:none!important; max-height:inherit!important; line-height:inherit!important } tr.es-desk-hidden { display:table-row!important } table.es-desk-hidden { display:table!important } td.es-desk-menu-hidden { display:table-cell!important } .es-menu td { width:1%!important } table.es-table-not-adapt, .esd-block-html table { width:auto!important } table.es-social { display:inline-block!important } table.es-social td { display:inline-block!important } a.es-button, button.es-button { font-size:20px!important; display:block!important; border-width:10px 0px 10px 0px!important } }
+    </style>
+    <script type="text/javascript">
+        window.onload = function printPage() {
+            window.print();
+        }
+    </script>
+</head>
+<body style="width:100%;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
+<div class="es-wrapper-color" style="background-color:#F6F6F6">
+    <!--[if gte mso 9]>
+    <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+        <v:fill type="tile" color="#f6f6f6"></v:fill>
+    </v:background>
+    <![endif]-->
+    <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top">
+        <tr style="border-collapse:collapse">
+            <td valign="top" style="padding:0;Margin:0">
+                <table class="es-header" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top">
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0">
+                            <table class="es-header-body" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:630px">
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:20px;padding-right:20px">
+                                        <table cellspacing="0" cellpadding="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="left" style="padding:0;Margin:0;width:590px">
+                                                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="/assets/logo/mydroneservice-color.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="200"></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="center" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#333333;font-size:14px">ÁTADÁSI IGAZOLÁS SZERVIZELÉSRŐL</p></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table></td>
+                                </tr>
+                            </table></td>
+                    </tr>
+                </table>
+                <table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%">
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0">
+                            <table bgcolor="#ffffff" class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:630px">
+                                <tr style="border-collapse:collapse">
+                                    <td style="padding:20px;Margin:0;border-radius:0px 0px 10px 10px;background-size:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:#1890ff" align="left" bgcolor="#1890ff">
+                                        <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="center" valign="top" style="padding:0;Margin:0;width:590px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="center" bgcolor="#ffffff" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:30px;color:#333333;font-size:20px"><span style="color:#808080">Ügyszám: </span><strong><?php echo "C" . $case["id"]; ?></strong></p></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table></td>
+                                </tr>
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="Margin:0;padding-top:10px;padding-bottom:10px;padding-left:20px;padding-right:20px">
+                                        <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="center" valign="top" style="padding:0;Margin:0;width:590px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="center" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif">ÁTADOTT TERMÉKEK</h5></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table></td>
+                                </tr>
+                            </table></td>
+                    </tr>
+                </table>
+
+                <?php
+
+                foreach ($postacc as $accessory) {
+                    if ($accessory == "deviceitself") {
+                        echo "<table cellpadding=\"0\" cellspacing=\"0\" class=\"es-content\" align=\"center\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%\">\n";
+                        echo "                    <tr style=\"border-collapse:collapse\">\n";
+                        echo "                        <td align=\"center\" style=\"padding:0;Margin:0\">\n";
+                        echo "                            <table bgcolor=\"#ffffff\" class=\"es-content-body\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:630px\">\n";
+                        echo "                                <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                    <td align=\"left\" style=\"padding:0;Margin:0;padding-left:20px;padding-right:20px;background-position:center center\">\n";
+                        echo "                                        <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">\n";
+                        echo "                                            <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                <td align=\"center\" valign=\"top\" style=\"padding:0;Margin:0;width:590px\">\n";
+                        echo "                                                    <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">\n";
+                        echo "                                                        <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                            <td align=\"center\" style=\"padding:0;Margin:0;padding-top:5px;padding-bottom:5px\">\n";
+                        echo "                                                                <table border=\"0\" width=\"100%\" height=\"100%\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">\n";
+                        echo "                                                                    <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                                        <td style=\"padding:0;Margin:0;border-bottom:1px solid #CCCCCC;background:none;height:1px;width:100%;margin:0px\"></td>\n";
+                        echo "                                                                    </tr>\n";
+                        echo "                                                                </table></td>\n";
+                        echo "                                                        </tr>\n";
+                        echo "                                                    </table></td>\n";
+                        echo "                                            </tr>\n";
+                        echo "                                        </table></td>\n";
+                        echo "                                </tr>\n";
+                        echo "                                <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                    <td class=\"esdev-adapt-off\" align=\"left\" style=\"Margin:0;padding-bottom:10px;padding-top:20px;padding-left:20px;padding-right:20px\">\n";
+                        echo "                                        <table cellpadding=\"0\" cellspacing=\"0\" class=\"esdev-mso-table\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:590px\">\n";
+                        echo "                                            <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                <td class=\"esdev-mso-td\" valign=\"top\" style=\"padding:0;Margin:0\">\n";
+                        echo "                                                    <table cellpadding=\"0\" cellspacing=\"0\" class=\"es-left\" align=\"left\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left\">\n";
+                        echo "                                                        <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                            <td align=\"left\" style=\"padding:0;Margin:0;width:285px\">\n";
+                        echo "                                                                <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">\n";
+                        echo "                                                                    <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                                        <td align=\"left\" style=\"padding:0;Margin:0\"><h4 style=\"Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif\"><a target=\"_blank\" style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-size:14px;text-decoration:none;color:#333333\" class=\"p_name\" href=\"https://viewstripo.email\">" . $device["name"] . "</a></h4><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999\"><span class=\"p_option\">S/N: " . $device["serial"] . "</span></p></td>\n";
+                        echo "                                                                    </tr>\n";
+                        echo "                                                                </table></td>\n";
+                        echo "                                                            <td style=\"padding:0;Margin:0;width:20px\"></td>\n";
+                        echo "                                                        </tr>\n";
+                        echo "                                                    </table></td>\n";
+                        echo "                                                <td class=\"esdev-mso-td\" valign=\"top\" style=\"padding:0;Margin:0\">\n";
+                        echo "                                                    <table cellpadding=\"0\" cellspacing=\"0\" class=\"es-right\" align=\"right\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right\">\n";
+                        echo "                                                        <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                            <td align=\"left\" style=\"padding:0;Margin:0;width:285px\">\n";
+                        echo "                                                                <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">\n";
+                        echo "                                                                    <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                                        <td align=\"left\" style=\"padding:0;Margin:0\">\n";
+                        echo "                                                                            <table style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%\" class=\"cke_show_border\" cellspacing=\"1\" cellpadding=\"1\" border=\"0\" role=\"presentation\">\n";
+                        echo "                                                                                <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                                                    <td style=\"padding:0;Margin:0;text-align:center;font-size:13px;line-height:13px\" width=\"15%\" align=\"center\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#333333\"><strong class=\"p_quantity\"></strong></p></td>\n";
+                        echo "                                                                                    <td style=\"padding:0;Margin:0;text-align:center;font-size:13px;line-height:13px\" width=\"30%\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#333333\"><strong class=\"p_price\"></strong></p></td>\n";
+                        echo "                                                                                </tr>\n";
+                        echo "                                                                            </table></td>\n";
+                        echo "                                                                    </tr>\n";
+                        echo "                                                                </table></td>\n";
+                        echo "                                                        </tr>\n";
+                        echo "                                                    </table></td>\n";
+                        echo "                                            </tr>\n";
+                        echo "                                        </table></td>\n";
+                        echo "                                </tr>\n";
+                        echo "                            </table></td>\n";
+                        echo "                    </tr>\n";
+                        echo "                </table>";
+                    }
+                }
+
+
+                ?>
+
+                <?php
+                // Kiegészítők
+                foreach ($postacc as $accessory) {
+                    if ($accessory != "deviceitself") {
+                        $accitem = explode(": ", $accessory);
+
+                        echo "<table cellpadding=\"0\" cellspacing=\"0\" class=\"es-content\" align=\"center\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%\">\n";
+                        echo "                    <tr style=\"border-collapse:collapse\">\n";
+                        echo "                        <td align=\"center\" style=\"padding:0;Margin:0\">\n";
+                        echo "                            <table bgcolor=\"#ffffff\" class=\"es-content-body\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:630px\">\n";
+                        echo "                                <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                    <td align=\"left\" style=\"padding:0;Margin:0;padding-left:20px;padding-right:20px;background-position:center center\">\n";
+                        echo "                                        <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">\n";
+                        echo "                                            <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                <td align=\"center\" valign=\"top\" style=\"padding:0;Margin:0;width:590px\">\n";
+                        echo "                                                    <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">\n";
+                        echo "                                                        <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                            <td align=\"center\" style=\"padding:0;Margin:0;padding-top:5px;padding-bottom:5px\">\n";
+                        echo "                                                                <table border=\"0\" width=\"100%\" height=\"100%\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">\n";
+                        echo "                                                                    <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                                        <td style=\"padding:0;Margin:0;border-bottom:1px solid #CCCCCC;background:none;height:1px;width:100%;margin:0px\"></td>\n";
+                        echo "                                                                    </tr>\n";
+                        echo "                                                                </table></td>\n";
+                        echo "                                                        </tr>\n";
+                        echo "                                                    </table></td>\n";
+                        echo "                                            </tr>\n";
+                        echo "                                        </table></td>\n";
+                        echo "                                </tr>\n";
+                        echo "                                <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                    <td class=\"esdev-adapt-off\" align=\"left\" style=\"Margin:0;padding-bottom:10px;padding-top:20px;padding-left:20px;padding-right:20px\">\n";
+                        echo "                                        <table cellpadding=\"0\" cellspacing=\"0\" class=\"esdev-mso-table\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:590px\">\n";
+                        echo "                                            <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                <td class=\"esdev-mso-td\" valign=\"top\" style=\"padding:0;Margin:0\">\n";
+                        echo "                                                    <table cellpadding=\"0\" cellspacing=\"0\" class=\"es-left\" align=\"left\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left\">\n";
+                        echo "                                                        <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                            <td align=\"left\" style=\"padding:0;Margin:0;width:285px\">\n";
+                        echo "                                                                <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">\n";
+                        echo "                                                                    <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                                        <td align=\"left\" style=\"padding:0;Margin:0\"><h4 style=\"Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif\"><a target=\"_blank\" style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-size:14px;text-decoration:none;color:#333333\" class=\"p_name\" href=\"https://viewstripo.email\">" . $device["name"] . " " . $accitem[0] . "</a></h4><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999\"><span class=\"p_option\">S/N: " . $accitem[1] . "</span></p></td>\n";
+                        echo "                                                                    </tr>\n";
+                        echo "                                                                </table></td>\n";
+                        echo "                                                            <td style=\"padding:0;Margin:0;width:20px\"></td>\n";
+                        echo "                                                        </tr>\n";
+                        echo "                                                    </table></td>\n";
+                        echo "                                                <td class=\"esdev-mso-td\" valign=\"top\" style=\"padding:0;Margin:0\">\n";
+                        echo "                                                    <table cellpadding=\"0\" cellspacing=\"0\" class=\"es-right\" align=\"right\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right\">\n";
+                        echo "                                                        <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                            <td align=\"left\" style=\"padding:0;Margin:0;width:285px\">\n";
+                        echo "                                                                <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\">\n";
+                        echo "                                                                    <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                                        <td align=\"left\" style=\"padding:0;Margin:0\">\n";
+                        echo "                                                                            <table style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%\" class=\"cke_show_border\" cellspacing=\"1\" cellpadding=\"1\" border=\"0\" role=\"presentation\">\n";
+                        echo "                                                                                <tr style=\"border-collapse:collapse\">\n";
+                        echo "                                                                                    <td style=\"padding:0;Margin:0;text-align:center;font-size:13px;line-height:13px\" width=\"15%\" align=\"center\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#333333\"><strong class=\"p_quantity\"></strong></p></td>\n";
+                        echo "                                                                                    <td style=\"padding:0;Margin:0;text-align:center;font-size:13px;line-height:13px\" width=\"30%\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#333333\"><strong class=\"p_price\"></strong></p></td>\n";
+                        echo "                                                                                </tr>\n";
+                        echo "                                                                            </table></td>\n";
+                        echo "                                                                    </tr>\n";
+                        echo "                                                                </table></td>\n";
+                        echo "                                                        </tr>\n";
+                        echo "                                                    </table></td>\n";
+                        echo "                                            </tr>\n";
+                        echo "                                        </table></td>\n";
+                        echo "                                </tr>\n";
+                        echo "                            </table></td>\n";
+                        echo "                    </tr>\n";
+                        echo "                </table>";
+                    }
+                }
+
+
+                ?>
+                <table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%">
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0">
+                            <table bgcolor="#ffffff" class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:630px">
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="padding:0;Margin:0;background-position:center center">
+                                        <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="center" valign="top" style="padding:0;Margin:0;width:630px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="center" style="Margin:0;padding-top:5px;padding-bottom:20px;padding-left:20px;padding-right:20px;font-size:0px">
+                                                                <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                                    <tr style="border-collapse:collapse">
+                                                                        <td style="padding:0;Margin:0;border-bottom:1px solid #CCCCCC;background:none;height:1px;width:100%;margin:0px"></td>
+                                                                    </tr>
+                                                                </table></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table></td>
+                                </tr>
+                            </table></td>
+                    </tr>
+                </table>
+                <table class="es-content" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%">
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0">
+                            <table class="es-content-body" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:630px">
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="padding:0;Margin:0;padding-left:20px;padding-right:20px">
+                                        <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                            <tr style="border-collapse:collapse">
+                                                <td valign="top" align="center" style="padding:0;Margin:0;width:590px">
+                                                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="center" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif">A VÁSÁRLÓ ADATAI</h5></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table></td>
+                                </tr>
+                            </table></td>
+                    </tr>
+                </table>
+                <table class="es-footer" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top">
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0">
+                            <table class="es-footer-body" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:630px">
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px">
+                                        <!--[if mso]><table style="width:590px" cellpadding="0" cellspacing="0"><tr><td style="width:204px" valign="top"><![endif]-->
+                                        <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left">
+                                            <tr style="border-collapse:collapse">
+                                                <td class="es-m-p0r es-m-p20b" align="center" style="padding:0;Margin:0;width:184px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999">Név</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php echo $user["lastname"] . " " . $user["firstname"]; ?></h5></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0;padding-top:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999">Email</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php echo $user["email"]; ?></h5></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0;padding-top:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999">Telefon</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php echo $user["phone"]; ?></h5></td>
+                                                        </tr>
+                                                    </table></td>
+                                                <td class="es-hidden" style="padding:0;Margin:0;width:20px"></td>
+                                            </tr>
+                                        </table>
+                                        <!--[if mso]></td><td style="width:183px" valign="top"><![endif]-->
+                                        <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left">
+                                            <tr style="border-collapse:collapse">
+                                                <td class="es-m-p20b" align="center" style="padding:0;Margin:0;width:183px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">Szállítási cím</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php echo $deladdress["name"]; ?><br><br><?php echo $deladdress["postcode"] . " " . $deladdress["city"]; ?></h5><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php echo $deladdress["address"]; ?></h5></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table>
+                                        <!--[if mso]></td><td style="width:20px"></td><td style="width:183px" valign="top"><![endif]-->
+                                        <table cellpadding="0" cellspacing="0" class="es-right" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="center" style="padding:0;Margin:0;width:183px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">Számlázási cím</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php echo $daddress["name"]; ?><br><br><?php echo $daddress["postcode"] . " " . $daddress["city"]; ?></h5><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php echo $daddress["address"]; ?></h5></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table>
+                                        <!--[if mso]></td></tr></table><![endif]--></td>
+                                </tr>
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px">
+                                        <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="center" valign="top" style="padding:0;Margin:0;width:590px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="center" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif">A VÉGTESZTELÉS EREDMÉNYE</h5></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table></td>
+                                </tr>
+                            </table></td>
+                    </tr>
+                </table>
+                <table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%">
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0">
+                            <table bgcolor="#ffffff" class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:630px">
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="padding:0;Margin:0;padding-left:20px;padding-right:20px;background-position:center center">
+                                        <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="center" valign="top" style="padding:0;Margin:0;width:590px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="center" style="padding:0;Margin:0;padding-bottom:5px;padding-top:15px;font-size:0px">
+                                                                <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                                    <tr style="border-collapse:collapse">
+                                                                        <td style="padding:0;Margin:0;border-bottom:1px solid #cccccc;background:none;height:1px;width:100%;margin:0px"></td>
+                                                                    </tr>
+                                                                </table></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table></td>
+                                </tr>
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px">
+                                        <!--[if mso]><table style="width:590px" cellpadding="0" cellspacing="0"><tr><td style="width:285px" valign="top"><![endif]-->
+                                        <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left">
+                                            <tr style="border-collapse:collapse">
+                                                <td class="es-m-p20b" align="left" style="padding:0;Margin:0;width:285px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0;padding-top:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">Külső állapot ellenőrzése</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php if (isset($dbendtest[0]["external"])) { if ($dbendtest[0]["external"] == "1") { echo "Megfelelt"; } else { echo "Nem felelt meg"; } } ?></h5></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0;padding-top:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">Pozíció tartás</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php if (isset($dbendtest[0]["position"])) { if ($dbendtest[0]["position"] == "1") { echo "Megfelelt"; } else { echo "Nem felelt meg"; } } ?></h5></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0;padding-top:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">Gimbal stabilitás</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php if (isset($dbendtest[0]["gimbal"])) { if ($dbendtest[0]["gimbal"] == "1") { echo "Megfelelt"; } else { echo "Nem felelt meg"; } } ?></h5></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0;padding-top:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">Jelátvitel</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php if (isset($dbendtest[0]["rc"])) { if ($dbendtest[0]["rc"] == "1") { echo "Megfelelt"; } else { echo "Nem felelt meg"; } } ?></h5></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table>
+                                        <!--[if mso]></td><td style="width:20px"></td><td style="width:285px" valign="top"><![endif]-->
+                                        <table cellpadding="0" cellspacing="0" class="es-right" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="left" style="padding:0;Margin:0;width:285px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0;padding-top:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">Szoftveres állapot ellenőrzése</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php if (isset($dbendtest[0]["internal"])) { if ($dbendtest[0]["internal"] == "1") { echo "Megfelelt"; } else { echo "Nem felelt meg"; } } ?></h5></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0;padding-top:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">Repülési dinamika</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php if (isset($dbendtest[0]["flightdynamics"])) { if ($dbendtest[0]["flightdynamics"] == "1") { echo "Megfelelt"; } else { echo "Nem felelt meg"; } } ?></h5></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0;padding-top:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">Akadály érzékelés</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php if (isset($dbendtest[0]["obstacle"])) { if ($dbendtest[0]["obstacle"] == "1") { echo "Megfelelt"; } else { echo "Nem felelt meg"; } } ?></h5></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0;padding-top:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">Adatrögzítés</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php if (isset($dbendtest[0]["recording"])) { if ($dbendtest[0]["recording"] == "1") { echo "Megfelelt"; } else { echo "Nem felelt meg"; } } ?></h5></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table>
+                                        <!--[if mso]></td></tr></table><![endif]--></td>
+                                </tr>
+                            </table></td>
+                    </tr>
+                </table>
+                <table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%">
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0">
+                            <table bgcolor="#ffffff" class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:630px">
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px">
+                                        <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="left" style="padding:0;Margin:0;width:590px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">A tesztelést végezte</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <?php
+                                                            $msguser = $dbtestuser[0];
+                                                            $roles = simplexml_load_file('../db/roles.db');
+                                                            $langc = $_COOKIE["sw_lang"];
+                                                            foreach ($roles->role as $role) {
+                                                                if ($role["id"] == $msguser["role"]) {
+                                                                    $roletext = $role->$langc;
+                                                                    $roleicon = $role->icon;
+                                                                    $rolecolor = $role->color;
+                                                                }
+                                                            }
+                                                            ?>
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php echo $dbtestuser[0]["lastname"] . " " . $dbtestuser[0]["firstname"]; ?> - <?php echo $roletext; ?></h5></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php echo $dbendtest[0]["date"]; ?></h5></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table></td>
+                                    <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px">
+                                        <?php
+                                        $msguser = $dbtestuser2[0];
+                                        $roles = simplexml_load_file('../db/roles.db');
+                                        $langc = $_COOKIE["sw_lang"];
+                                        foreach ($roles->role as $role) {
+                                            if ($role["id"] == $msguser["role"]) {
+                                                $roletext = $role->$langc;
+                                                $roleicon = $role->icon;
+                                                $rolecolor = $role->color;
+                                            }
+                                        }
+                                        ?>
+                                        <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="left" style="padding:0;Margin:0;width:590px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">A tesztelést jóváhagyta</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php echo $dbtestuser2[0]["lastname"] . " " . $dbtestuser2[0]["firstname"]; ?> - <?php echo $roletext; ?></h5></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php echo $dbendtest[0]["confirmDate"]; ?></h5></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table></td>
+                                </tr>
+                            </table></td>
+                    </tr>
+                </table>
+                <table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%">
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0">
+                            <table bgcolor="#ffffff" class="es-content-body" align="center" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:630px">
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="padding:0;Margin:0;padding-left:20px;padding-right:20px;background-position:center center">
+                                        <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="center" valign="top" style="padding:0;Margin:0;width:590px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="center" style="padding:0;Margin:0;padding-bottom:5px;padding-top:15px;font-size:0px">
+                                                                <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                                    <tr style="border-collapse:collapse">
+                                                                        <td style="padding:0;Margin:0;border-bottom:1px solid #cccccc;background:none;height:1px;width:100%;margin:0px"></td>
+                                                                    </tr>
+                                                                </table></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table></td>
+                                </tr>
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px">
+                                        <!--[if mso]><table style="width:590px" cellpadding="0" cellspacing="0"><tr><td style="width:285px" valign="top"><![endif]-->
+                                        <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left">
+                                            <tr style="border-collapse:collapse">
+                                                <td class="es-m-p20b" align="left" style="padding:0;Margin:0;width:285px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">A terméket átadta</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php echo $suser["lastname"] . " " . $suser["firstname"]; ?></h5></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table>
+                                        <!--[if mso]></td><td style="width:20px"></td><td style="width:285px" valign="top"><![endif]-->
+                                        <table cellpadding="0" cellspacing="0" class="es-right" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="left" style="padding:0;Margin:0;width:285px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">A terméket átvette</p></td>
+                                                        </tr>
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><h5 style="Margin:0;line-height:120%;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif"><?php echo $user["lastname"] . " " . $user["firstname"]; ?></h5></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table>
+                                        <!--[if mso]></td></tr></table><![endif]--></td>
+                                </tr>
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px">
+                                        <!--[if mso]><table style="width:590px" cellpadding="0" cellspacing="0"><tr><td style="width:285px" valign="top"><![endif]-->
+                                        <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left">
+                                            <tr style="border-collapse:collapse">
+                                                <td class="es-m-p20b" align="left" style="padding:0;Margin:0;width:285px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="center" style="padding:0;Margin:0;padding-bottom:5px;padding-top:25px;font-size:0px">
+                                                                <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                                    <tr style="border-collapse:collapse">
+                                                                        <td style="padding:0;Margin:0;border-bottom:1px solid #cccccc;background:none;height:1px;width:100%;margin:0px"></td>
+                                                                    </tr>
+                                                                </table></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table>
+                                        <!--[if mso]></td><td style="width:20px"></td><td style="width:285px" valign="top"><![endif]-->
+                                        <table cellpadding="0" cellspacing="0" class="es-right" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="left" style="padding:0;Margin:0;width:285px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="center" style="padding:0;Margin:0;padding-bottom:5px;padding-top:25px;font-size:0px">
+                                                                <table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                                    <tr style="border-collapse:collapse">
+                                                                        <td style="padding:0;Margin:0;border-bottom:1px solid #cccccc;background:none;height:1px;width:100%;margin:0px"></td>
+                                                                    </tr>
+                                                                </table></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table>
+                                        <!--[if mso]></td></tr></table><![endif]--></td>
+                                </tr>
+                            </table></td>
+                    </tr>
+                </table>
+                <table cellpadding="0" cellspacing="0" class="es-content" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%">
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0">
+                            <table class="es-content-body" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:630px">
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px">
+                                        <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                            <tr style="border-collapse:collapse">
+                                                <td align="center" valign="top" style="padding:0;Margin:0;width:590px">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td align="left" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">Budapest, <?php echo date("Y-m-d H:i:s"); ?></p></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table></td>
+                                </tr>
+                                <tr style="border-collapse:collapse">
+                                    <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:40px;padding-right:40px">
+                                        <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                            <tr style="border-collapse:collapse">
+                                                <td valign="top" align="center" style="padding:0;Margin:0;width:550px">
+                                                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                        <tr style="border-collapse:collapse">
+                                                            <td class="es-m-txt-c" align="center" style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#999999;font-size:14px">A lap aláírásával elfogadja a MyDroneService Általános Felhasználási Feltételeit, melyet a mydroneservice.hu&nbsp; weboldalon talál.</p></td>
+                                                        </tr>
+                                                    </table></td>
+                                            </tr>
+                                        </table></td>
+                                </tr>
+                            </table></td>
+                    </tr>
+                </table></td>
+        </tr>
+    </table>
+</div>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</body>
+</html>

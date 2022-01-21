@@ -1,0 +1,3 @@
+Changelog\n
+-----------\n
+Open Beta v1.0.0
